@@ -1,0 +1,46 @@
+
+.top{
+  text-align: center;
+  border-style: dashed;
+  padding: 0px;
+  margin:0px;
+  border-radius: 10px;
+}
+.header{
+  text-align: center;
+  color: rgb(61,66,94);
+  background-color:rgb(190,196,228);
+  border-radius: 10px;
+  font-size: 11pt;
+  padding: 10px;
+  margin: 2px;
+}
+
+.intro{
+  text-align: center;
+  color: white;
+  background-color: rgb(39,45,74);
+  border-radius: 10px;
+  font-size: 15pt;
+  padding: 10px;
+  margin: 2px;
+}
+
+.info{
+  text-align: center;
+  color: black; 
+  background-color: white;
+  font-size: 11pt;
+  padding: 0px;
+  margin: 2px; 
+}
+
+.instagram{
+  text-align:center;
+  background-color:rgb(175, 166, 166);
+  border-style: dashed;
+  border-radius: 10px;
+  font-size: 9pt;
+  padding: 0px;
+  margin: 2px;
+}
