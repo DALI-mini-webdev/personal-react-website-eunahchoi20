@@ -3,12 +3,16 @@ import food from './food.jpg'
 import yellow from './MyGif.gif'
 import red from './bird.jpg'
 import dog from './dog.jpg'
+import Navbar from './components/Navbar/Navbar';
+import Button from './myButton.js';
+import IceCreamBoard from './IceCreamComponents/IceCreamBoard';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-        <html> 
+      <Navbar />
+    <html> 
       <head>
         <title> Eunah's Website </title> 
       </head>
@@ -23,19 +27,23 @@ function App() {
          <div className= "header">
           <h2> Economics major ||
                     Bates College '23 ||
-                    Olympia, Washington </h2>
+                    Olympia, Washington 
+          </h2>
        </div>
         <div>
-                  <h3>
+                  <h1>
                     Here is some of my art: (Check it out!)
-                  </h3>
+                  </h1>
                   <a href= "https://www.instagram.com/eunabstract/">
+                  <Button href= "https://www.instagram.com/eunabstract/"/>
             <h4> 
               Click Here to see my instagram account 
             </h4>
           </a>
         </div>
-        <div></div>
+        <div>
+        <IceCreamBoard />
+        </div>
          <img src ={food} height="500px" width="500px" />
          <img src= {yellow} alt="image" height="500px" width="500px" />
         </div>
@@ -45,7 +53,6 @@ function App() {
         </div>
       </body>
     </html>
-      
     </div>
   );
 }
