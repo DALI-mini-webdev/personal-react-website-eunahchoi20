@@ -12,18 +12,13 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-    <html> 
-      <head>
-        <title> Eunah's Website </title> 
-      </head>
-      <body> 
         <div className="top">
           <h1> Welcome to My Website!</h1>
         </div>
        <div>
          <div className= "intro"> 
          <h2> Eunah Choi</h2>
-         </div>
+       </div>
          <div className= "header">
           <h2> Economics major ||
                     Bates College '23 ||
@@ -31,18 +26,18 @@ function App() {
           </h2>
        </div>
         <div>
-                  <h1>
-                    Here is some of my art: (Check it out!)
-                  </h1>
-                  <a href= "https://www.instagram.com/eunabstract/">
-                  <Button href= "https://www.instagram.com/eunabstract/"/>
-            <h4> 
-              Click Here to see my instagram account 
-            </h4>
+          <h1>
+            Here is some of my art: (Check it out!)
+          </h1>
+          <a href= "https://www.instagram.com/eunabstract/">
+          <Button href= "https://www.instagram.com/eunabstract/"/>
+          <h4> 
+            Click Here to see my instagram account 
+          </h4>
           </a>
         </div>
         <div>
-        <IceCreamBoard />
+          <IceCreamBoard />
         </div>
          <img src ={food} height="500px" width="500px" />
          <img src= {yellow} alt="image" height="500px" width="500px" />
@@ -51,10 +46,10 @@ function App() {
           <img src={red} height="500px" width="500px" />
           <img src={dog} height="500px" width="500px"/>
         </div>
-      </body>
-    </html>
     </div>
   );
 }
 
 export default App;
+
+

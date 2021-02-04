@@ -14,23 +14,33 @@ class IceCreamBoard extends Component {
     }
   }
 
-  NewIceCreamNameFunction = (event) => {
+  delete = (id) => {
+    this.setState({ IceCream: this.state.IceCream.delete(id)})
+  }
+
+  save = (id, field) => {
+    this.setState({IceCream: this.state.IceCream.update(id, (n) => { return Object.assign({}, n, field);})})
+  }
+
+  newIceCreamNameFunction = (event) => {
+    console.log(event.target.value)
     this.setState({
       newIceCreamName: event.target.value
     });
   }
 
-  NewIceCreamFlavorFunction = (event) => {
+  newIceCreamFlavorFunction = (event) => {
     this.setState({
       newIceCreamFlavor: event.target.value
     });
   }
 
-  NewIceCreamImageFunction = (event) => {
+  newIceCreamImageFunction = (event) => {
     this.setState({
       newIceCreamImage: event.target.value
     });
   }
+
 
   saveIceCreamInfo = () => {
     let IceCreamData= {
@@ -49,8 +59,10 @@ class IceCreamBoard extends Component {
       ([id, IceCream]) => {
         return(
           <IceCreamPosting
-            Name = {IceCream.name}
-            Flavor = {IceCream.flavor}
+            save={this.save}
+            delete = {this.delete}
+            name = {IceCream.name}
+            flavor = {IceCream.flavor}
             IceCreamURL= {IceCream.image}
             key={id}
           />
@@ -66,7 +78,7 @@ class IceCreamBoard extends Component {
         <input type="text" value={this.state.newIceCreamName} 
         onChange={this.newIceCreamNameFunction} />
         <h4> enter a flavor:</h4>
-        <input type="text" value ={this.state.newIceCreamFlavor} 
+        <input type="text" value={this.state.newIceCreamFlavor} 
         onChange={this.newIceCreamFlavorFunction} />
         <h4> enter an Image URL:</h4>
         <input type="text" value={this.state.newIceCreamImage} 
