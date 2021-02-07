@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class IceCreamPosting extends Component {
+class namePosting extends Component {
     constructor(props) {
         super(props);
         this.state = {editing: false, newTitle: ''};
@@ -42,7 +42,6 @@ class IceCreamPosting extends Component {
       return (
         <div>
             <p> {this.props.name}, {this.props.flavor}</p>
-            <img src= { this.props.IceCreamURL } alt= 'Image' />
             <button onClick={this.deletePosting}>Delete</button>  
             {editBoxOrEditButton}   
          </div>
@@ -50,4 +49,4 @@ class IceCreamPosting extends Component {
   }
 }
 
-export default IceCreamPosting; 
+export default namePosting; 

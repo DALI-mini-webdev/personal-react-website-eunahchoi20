@@ -6,12 +6,28 @@ import dog from './dog.jpg'
 import Navbar from './components/Navbar/Navbar';
 import Button from './myButton.js';
 import IceCreamBoard from './IceCreamComponents/IceCreamBoard';
+import nameBoard from './namecreator/nameBoard';
 import './App.css';
+import {BrowserRouter as Router, Switch, Route } from 'react-router-dom'; 
+import Instagram from './components/pages/Instagram';
+import Art from './components/pages/Art';
+import IceCreamCreator from './components/pages/IceCreamCreator';
+import SignUp from './components/pages/SignUp';
+import Home from './components/pages/Home';
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route path='/' exact component={Home} />
+          <Route path='/Instagram' exact component={Instagram} />
+          <Route path='/Art' exact component={Art} />
+          <Route path='/IceCreamCreator' exact component={IceCreamCreator} />
+          <Route path='/SignUp' exact component={SignUp} />
+        </Switch>
+      </Router>
         <div className="top">
           <h1> Welcome to My Website!</h1>
         </div>
@@ -38,6 +54,7 @@ function App() {
         </div>
         <div>
           <IceCreamBoard />
+          <nameBoard />
         </div>
          <img src ={food} height="500px" width="500px" />
          <img src= {yellow} alt="image" height="500px" width="500px" />
