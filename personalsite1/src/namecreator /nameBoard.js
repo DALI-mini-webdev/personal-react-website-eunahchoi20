@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {Map} from 'immutable';
-import namePosting from './namePosting';
+import NamePosting from './NamePosting';
 
-class nameBoard extends Component {
+className NameBoard extends Component {
   constructor(props) {
     super(props) ;
     this.state = {
@@ -49,11 +49,11 @@ class nameBoard extends Component {
     const Allname = this.state.name.entrySeq().map(
       ([id, name]) => {
         return(
-          <namePosting
+          <NamePosting
             save={this.save}
             delete = {this.delete}
-            name = {name.name}
-            secondName = {name.secondName}
+            Name = {Name.Name}
+            secondName = {Name.secondName}
             key={id}
           />
         );
@@ -65,8 +65,8 @@ class nameBoard extends Component {
         {Allname}
         <h3> create your name</h3>
         <h4> Enter a name:</h4>
-        <input type="text" value={this.state.newnameName} 
-        onChange={this.newnameFunction} />
+        <input type="text" value={this.state.newNameName} 
+        onChange={this.newNameFunction} />
         <h4> enter your second name:</h4>
         <input type="text" value={this.state.newsecondName} 
         onChange={this.newsecondNameFunction} />
@@ -75,6 +75,6 @@ class nameBoard extends Component {
   }
 }
 
-export default nameBoard;
+export default NameBoard;
 
 

@@ -6,7 +6,7 @@ import dog from './dog.jpg'
 import Navbar from './components/Navbar/Navbar';
 import Button from './myButton.js';
 import IceCreamBoard from './IceCreamComponents/IceCreamBoard';
-import nameBoard from './namecreator/nameBoard';
+import NameBoard from './namecreator/NameBoard';
 import './App.css';
 import {BrowserRouter as Router, Switch, Route } from 'react-router-dom'; 
 import Instagram from './components/pages/Instagram';
@@ -54,7 +54,9 @@ function App() {
         </div>
         <div>
           <IceCreamBoard />
-          <nameBoard />
+        </div>
+        <div>
+          <NameBoard />
         </div>
          <img src ={food} height="500px" width="500px" />
          <img src= {yellow} alt="image" height="500px" width="500px" />

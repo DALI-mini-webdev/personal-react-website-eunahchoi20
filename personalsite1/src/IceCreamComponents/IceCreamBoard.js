@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Map} from 'immutable';
 import IceCreamPosting from './IceCreamPosting';
 
-class IceCreamBoard extends Component {
+className IceCreamBoard extends Component {
   constructor(props) {
     super(props) ;
     this.state = {
