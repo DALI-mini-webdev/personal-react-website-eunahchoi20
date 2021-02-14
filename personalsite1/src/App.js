@@ -6,28 +6,15 @@ import dog from './dog.jpg'
 import Navbar from './components/Navbar/Navbar';
 import Button from './myButton.js';
 import IceCreamBoard from './IceCreamComponents/IceCreamBoard';
-import NameBoard from './namecreator/NameBoard';
+import NameBoard from './components/namecreator/NameBoard';
 import './App.css';
-import {BrowserRouter as Router, Switch, Route } from 'react-router-dom'; 
-import Instagram from './components/pages/Instagram';
-import Art from './components/pages/Art';
-import IceCreamCreator from './components/pages/IceCreamCreator';
-import SignUp from './components/pages/SignUp';
-import Home from './components/pages/Home';
+import Api from './APIfolder/Api.js'
+
 
 function App() {
   return (
     <div className="App">
-      <Router>
         <Navbar />
-        <Switch>
-          <Route path='/' exact component={Home} />
-          <Route path='/Instagram' exact component={Instagram} />
-          <Route path='/Art' exact component={Art} />
-          <Route path='/IceCreamCreator' exact component={IceCreamCreator} />
-          <Route path='/SignUp' exact component={SignUp} />
-        </Switch>
-      </Router>
         <div className="top">
           <h1> Welcome to My Website!</h1>
         </div>
@@ -52,23 +39,25 @@ function App() {
           </h4>
           </a>
         </div>
+        <div> 
+          <Api />
+        </div>
         <div>
           <IceCreamBoard />
         </div>
         <div>
           <NameBoard />
         </div>
-         <img src ={food} height="500px" width="500px" />
-         <img src= {yellow} alt="image" height="500px" width="500px" />
+         <img src ={food} height="500px" width="500px" alt="food" />
+         <img src= {yellow} height="500px" width="500px" alt="duck" />
         </div>
         <div>
-          <img src={red} height="500px" width="500px" />
-          <img src={dog} height="500px" width="500px"/>
+          <img src={red} height="500px" width="500px" alt="bird" />
+          <img src={dog} height="500px" width="500px" alt="dog"/>
         </div>
     </div>
   );
 }
 
 export default App;
-
 

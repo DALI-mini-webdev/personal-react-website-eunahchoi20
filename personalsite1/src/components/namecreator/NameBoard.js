@@ -2,14 +2,14 @@ import React, {Component} from 'react';
 import {Map} from 'immutable';
 import NamePosting from './NamePosting';
 
-className NameBoard extends Component {
+class NameBoard extends Component {
   constructor(props) {
     super(props) ;
     this.state = {
       name: Map(),
       nameid: 0,
-      nameName: '',
-      secondName: '',
+      firstName: '',
+      lastName: '',
     }
   }
 
@@ -21,39 +21,39 @@ className NameBoard extends Component {
     this.setState({name: this.state.name.update(id, (n) => { return Object.assign({}, n, field);})})
   }
 
-  newnameNameFunction = (event) => {
+  newfirstNameFunction = (event) => {
     console.log(event.target.value)
     this.setState({
-      newnameName: event.target.value
+      newfirstName: event.target.value
     });
   }
 
-  newsecondNameFunction = (event) => {
+  newlastNameFunction = (event) => {
     this.setState({
-      newsecondName: event.target.value
+      newlastName: event.target.value
     });
   }
 
   saveNAMEInfo = () => {
     let NameData= {
-      name: this.state.newnameName,
-      secondName: this.state.newsecondName,
+      name: this.state.newfirstName,
+      lastName: this.state.newlastName,
     }
     this.setState ({
-      name: this.state.name.set(this.state.nameID, nameData),
+      name: this.state.name.set(this.state.nameID, NameData),
       nameID: this.state.nameID + 1
     });
   }   
 
   render() {
     const Allname = this.state.name.entrySeq().map(
-      ([id, name]) => {
+      ([id, Name]) => {
         return(
           <NamePosting
             save={this.save}
             delete = {this.delete}
-            Name = {Name.Name}
-            secondName = {Name.secondName}
+            firstName = {Name.firstName}
+            lastName = {Name.lastName}
             key={id}
           />
         );
@@ -68,8 +68,8 @@ className NameBoard extends Component {
         <input type="text" value={this.state.newNameName} 
         onChange={this.newNameFunction} />
         <h4> enter your second name:</h4>
-        <input type="text" value={this.state.newsecondName} 
-        onChange={this.newsecondNameFunction} />
+        <input type="text" value={this.state.newlastName} 
+        onChange={this.newlastNameFunction} />
       </div>
     );
   }

@@ -16,11 +16,9 @@
   justify-self: start;
   margin-left: 20px;
   cursor: pointer;
-  text-decoration: none;
-  font-size: 2rem;
 }
 
-.fa-firstdraft {
+.fa-react {
   margin-left: 0.5rem;
   font-size: 1.6rem;
 }

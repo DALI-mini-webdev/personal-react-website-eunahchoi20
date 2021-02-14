@@ -1,27 +1,33 @@
 export const MenuItems = [
     {
         title: 'Home',
-        path: '/Home',
+        url:'#',
         cName:'nav-links'
     },
     {
         title: 'Instagram',
-        path:'/Instagram',
+        url:'#',
         cName:'nav-links'
     },
     {
         title: 'Art',
-        path:'/Art',
+        url:'#',
         cName:'nav-links'
     },
     {
-        title: 'IceCreamCreator',
-        path:'/IceCreamCreator',
+        title: 'Ice Cream Creator',
+        url:'#',
         cName:'nav-links'
     },
     {
-        title: 'Signup',
-        path:'/SignUp',
+        title: 'Name Creator',
+        url:'#',
+        cName:'nav-links'
+    },
+
+    {
+        title: 'Sign up',
+        url:'#',
         cName:'nav-links-mobile'
     },
-]
+] 

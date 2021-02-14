@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Map} from 'immutable';
 import IceCreamPosting from './IceCreamPosting';
 
-className IceCreamBoard extends Component {
+class IceCreamBoard extends Component {
   constructor(props) {
     super(props) ;
     this.state = {
@@ -18,7 +18,8 @@ className IceCreamBoard extends Component {
     this.setState({ IceCream: this.state.IceCream.delete(id)})
   }
 
-  save = (id, field) => {
+  update = (id, field) => {
+    console.log("update")
     this.setState({IceCream: this.state.IceCream.update(id, (n) => { return Object.assign({}, n, field);})})
   }
 
@@ -52,6 +53,7 @@ className IceCreamBoard extends Component {
       IceCream: this.state.IceCream.set(this.state.IceCreamID, IceCreamData),
       IceCreamID: this.state.IceCreamID + 1
     });
+    console.log("here");
   }   
 
   render() {
@@ -59,7 +61,7 @@ className IceCreamBoard extends Component {
       ([id, IceCream]) => {
         return(
           <IceCreamPosting
-            save={this.save}
+            update={this.update}
             delete = {this.delete}
             name = {IceCream.name}
             flavor = {IceCream.flavor}
@@ -83,7 +85,7 @@ className IceCreamBoard extends Component {
         <h4> enter an Image URL:</h4>
         <input type="text" value={this.state.newIceCreamImage} 
         onChange={this.newIceCreamImageFunction} />
-        <button onClick={this.saveIceCreaminfo}>Save!</button>
+        <button onClick={this.saveIceCreamInfo}>Save!</button>
       </div>
     );
   }

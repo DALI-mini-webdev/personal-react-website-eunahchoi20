@@ -20,31 +20,34 @@ class IceCreamPosting extends Component {
     }
 
     submit = () => {
-        var newName = {
-            title: this.state.newName
-        }
-        this.props.save(this.props.id, newName);
+        this.props.update(this.props.key, this.state.newName);
 
         this.setState({editing: false});
     }
 
     render() {
-    var editBoxOrEditButton = null;
-
-    if(this.state.editing){
-        editBoxOrEditButton = (
-            <div>
-                <input value={this.state.newTitle} onChange={this.changeNewTitle} placeholder= "New Icecream"> </input>
-                <button onClick={this.submit}>submit</button>
-            </div>
-        )
+    const editBoxOrEditButton = () => {
+        if (this.state.editing) {
+            return ( 
+                <div>
+                    <input value={this.state.newTitle} onChange={this.changeNewTitle} placeholder= "New Icecream"/> 
+                    <button onClick={this.submit}>submit</button>
+                </div>
+            )
+        }
+        else {
+            return (
+                <button onClick={this.editName}> edit </button>
+            )
+        }
     }
+
       return (
         <div>
             <p> {this.props.name}, {this.props.flavor}</p>
             <img src= { this.props.IceCreamURL } alt= 'Image' />
             <button onClick={this.deletePosting}>Delete</button>  
-            {editBoxOrEditButton}   
+            {editBoxOrEditButton()}   
          </div>
     );
   }
