@@ -7,11 +7,14 @@ import Navbar from './components/Navbar/Navbar';
 import Button from './myButton.js';
 import IceCreamBoard from './IceCreamComponents/IceCreamBoard';
 import NameBoard from './components/namecreator/NameBoard';
+import ToDoBoard from './components/ToDoBoard';
 import './App.css';
-import Api from './APIfolder/Api.js'
-
+import Api from './APIfolder/Api.js';
+import firebase from './Firebase/index.js';
 
 function App() {
+  console.log(firebase);
+  console.log(firebase.db);
   return (
     <div className="App">
         <Navbar />
@@ -41,6 +44,9 @@ function App() {
         </div>
         <div> 
           <Api />
+        </div>
+        <div>
+          <ToDoBoard />
         </div>
         <div>
           <IceCreamBoard />
